@@ -3,7 +3,6 @@ package com.example.core.order;
 import com.example.core.discount.DiscountPolicy;
 import com.example.core.member.Member;
 import com.example.core.member.MemberRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -19,7 +18,7 @@ public class OrderServiceImpl implements OrderService {
 //    @Autowired
 //    private DiscountPolicy discountPolicy;
 
-//     생성자 DI
+    //     생성자 DI
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy
             discountPolicy) {
         this.memberRepository = memberRepository;
