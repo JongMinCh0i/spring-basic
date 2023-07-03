@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
     // 수정자 주입을 위한 final X
@@ -20,12 +19,12 @@ public class OrderServiceImpl implements OrderService {
 //    @Autowired
 //    private DiscountPolicy discountPolicy;
 
-    // 생성자 DI
-//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy
-//            discountPolicy) {
-//        this.memberRepository = memberRepository;
-//        this.discountPolicy = discountPolicy;
-//    }
+//     생성자 DI
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy
+            discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     // 수정자 DI
 //    @Autowired
