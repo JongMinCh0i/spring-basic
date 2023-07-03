@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService {
 
     // 수정자 주입을 위한 final X
-    private MemberRepository memberRepository;
-    private DiscountPolicy discountPolicy;
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
 
     // 필드 주입
 //    @Autowired
@@ -32,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
 //    public void setMemberRepository(MemberRepository memberRepository) {
 //        this.memberRepository = memberRepository;
 //    }
-
+//
 //    @Autowired
 //    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
 //        this.discountPolicy = discountPolicy;
